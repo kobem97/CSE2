@@ -1,14 +1,4 @@
 //Kobe Miller
-//Demo 0
-//Hello World Java Program
-//
-//  first compile the program
-//      javac HelloWorld.java
-//  run the program
-//      java HelloWorld//
-
-//  define a class
-//Kobe Miller
 //2-5-16
 //Cyclometer will calculate
 //Minutes in each trip
