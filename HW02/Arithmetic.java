@@ -1,9 +1,10 @@
 //Kobe Miller
 //2-6-16
+//HW02
 //Arithmatic will calculate cost of each item, tax, ect
 
 
-public class Arithmatic {
+public class Arithmetic {
        public static void main(String[] args) {
            
            //Number of pairs of pants
@@ -24,29 +25,66 @@ public class Arithmatic {
            //the tax rate
            double paSalesTax = 0.06;
            //
-           double costPants, costShirts, costBelts, totalCost; //Variables
+           double costPants, costShirts, costBelts, totalCost, 
+           taxPants, taxShirts, taxBelts, taxSales, totalSale; //Variables set
            //
            //Calculations
            //
-           costPants=numPants*pantsPrice;
-           costShirts=numShirts*shirtPrice;
-           costBelts=numBelts*beltCost;
-           totalCost=costBelts+costPants+costShirts;
+           costPants=numPants*pantsPrice; //total costs of pants
+           //
+           costShirts=numShirts*shirtPrice; //total costs of shirts
+           //
+           costBelts=numBelts*beltCost; //total costs of belts
+           //
+           totalCost=costBelts+costPants+costShirts; //total cost of everything
+           //
+           taxPants=costPants*paSalesTax; //tax on pants
+           //
+           taxShirts=costShirts*paSalesTax; //tax on shirts
+           //
+           taxBelts=costBelts*paSalesTax; //tax on belts
+           //
+           taxSales=totalCost*paSalesTax; //tax on everything
+           //
+           totalSale=((totalCost*paSalesTax)+totalCost); //total cost with tax
+           //
            //Print out data
-           System.out.println("The cost of pants is "+costPants+" dollars");
-           System.out.println("The cost of shirts is "+costShirts+" dollars");
-           System.out.println("The cost of belts is "+costBelts+" dollars");
-           System.out.println("The sales tax of pants is "+(costPants*paSalesTax)+" dollars");
-           System.out.println("The sales tax of shirts is "+(costShirts*paSalesTax)+" dollars");
-           System.out.println("The sales tax of belts is "+(costBelts*paSalesTax)+" dollars");
-           System.out.println("The total cost without tax is "+totalCost+" dollars");
-           System.out.println("The total sales tax is "+(totalCost*paSalesTax)+" dollars");
-           System.out.println("The total sale including tax is "+((totalCost*paSalesTax)+(totalCost))+" dollars");
-           
-           
-           
-           
-           
+           //
+           //Cost of pants
+           System.out.println("The cost of pants is "+
+                costPants+" dollars");
+           //
+           //Cost of shirts
+           System.out.println("The cost of shirts is "+
+                costShirts+" dollars");
+           //
+           //Costs of Belts
+           System.out.println("The cost of belts is "+
+                costBelts+" dollars");
+           //
+           //Sales tax of pants
+           System.out.println("The sales tax of pants is "+
+                (taxPants)+" dollars");
+           //
+           //Sales taax of shirts
+           System.out.println("The sales tax of shirts is "+
+                (taxShirts)+" dollars");
+           //
+           //Sales tax of belts
+           System.out.println("The sales tax of belts is "+
+                (taxBelts)+" dollars");
+           //
+           //Total cost of everything without tax
+           System.out.println("The total cost without tax is "+
+                totalCost+" dollars");
+           //
+           //Total sales tax
+           System.out.println("The total sales tax is "+
+                (taxSales)+" dollars");
+           //
+           //Total cost of everything
+           System.out.println("The total sale including tax is "+
+                (totalSale)+" dollars");
            
     }  //end of main method   
 } //end of class
