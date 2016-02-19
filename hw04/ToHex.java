@@ -12,7 +12,12 @@ public class ToHex {
        public static void main(String[] args) {
            
            Scanner colorInput = new Scanner(System.in); //Declaration
-           int hexRed, hexGreen, hexBlue, hexRedRemain, hexGreenRemain, hexBlueRemain;
+           //
+           //Declaring said integers as said variables
+           int hexRed, hexGreen, hexBlue, 
+           hexRedRemain, hexGreenRemain, hexBlueRemain;
+           //
+           //initializing string variables
            String redLetter ="";
            String blueLetter = "";
            String greenLetter = "";
@@ -117,19 +122,20 @@ public class ToHex {
                    blueLetter="F";
                }
            }
-           if ((colorRed<255 || colorRed>0) && 
-               (colorGreen<255 || colorGreen>0) && 
-               (colorBlue<255 || colorBlue>0))
-               {
-                   System.out.println("You cannot enter invalid values!");
-               }
-               
+           
+           
+               //results wont print unless you stay in number range
                if ((colorRed<255 && colorRed>0) && 
                (colorGreen<255 && colorGreen>0) && 
                (colorBlue<255 && colorBlue>0))
                {
                System.out.println(hexRed + redLetter + hexGreen + greenLetter + hexBlue + blueLetter);
                }
+               //if you go out of range, this will print
+               else {
+                   System.out.println("You cannont enter invalid numbers! ");
+               }
+               
                
            
     }  //end of main method   
