@@ -10,8 +10,8 @@ public class CardGenerator {
        public static void main(String[] args) {
            int suitGen = (int)((Math.random()*3)+1); //to prevent the random number gen from selecting 0
            if (suitGen==1){ //if the suit gen is one, it will go through these commands
-               int randomCard1 = (int)((Math.random()*13)+1);
-               if (randomCard1==1)
+               int randomCard1 = (int)((Math.random()*13)+1); //this picks a random number (0-13)+1
+               if (randomCard1==1) //if it generates a 1, it forces it to input a 2
                {
                    System.out.println("You got the 2 of diamonds");
                }
