@@ -17,10 +17,12 @@ public class ToHex {
            String blueLetter = "";
            String greenLetter = "";
            //
+           //
            //Asks user to input red
-           System.out.print("Enter the amount for red 0-255: ");
+           System.out.print("Enter the amount for red 0-255: "); //asks user to input red
            int colorRed = colorInput.nextInt();
-           hexRed = colorRed/16;
+           //calculations
+           hexRed = colorRed/16; 
            hexRedRemain = colorRed%16;
            if (hexRedRemain>=10)
            {
@@ -115,23 +117,19 @@ public class ToHex {
                    blueLetter="F";
                }
            }
-           if (colorRed>255 || colorRed<0) 
+           if ((colorRed<255 || colorRed>0) && 
+               (colorGreen<255 || colorGreen>0) && 
+               (colorBlue<255 || colorBlue>0))
                {
                    System.out.println("You cannot enter invalid values!");
                }
                
-           if (colorGreen>255 || colorGreen<0)
+               if ((colorRed<255 && colorRed>0) && 
+               (colorGreen<255 && colorGreen>0) && 
+               (colorBlue<255 && colorBlue>0))
                {
-                   System.out.println("You cannot enter invalid values!");
-               }
-               
-           if (colorBlue>255 || colorBlue<0)
-               {
-                   System.out.println("You cannot enter invalid values!");
-               }
-               
                System.out.println(hexRed + redLetter + hexGreen + greenLetter + hexBlue + blueLetter);
-               
+               }
                
            
     }  //end of main method   
