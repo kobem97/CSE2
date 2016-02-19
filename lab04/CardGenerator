@@ -1,0 +1,15 @@
+//Kobe Miller
+//2-5-16
+//Cyclometer will calculate
+//Minutes in each trip
+//Counts for each trip
+//Distance of each trip in miles
+//Distiance of two trips combined
+//MPG
+
+public class CardGenerator {
+       public static void main(String[] args) {
+        
+
+    }  //end of main method   
+} //end of class
