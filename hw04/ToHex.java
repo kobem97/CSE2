@@ -13,113 +13,126 @@ public class ToHex {
            
            Scanner colorInput = new Scanner(System.in); //Declaration
            int hexRed, hexGreen, hexBlue, hexRedRemain, hexGreenRemain, hexBlueRemain;
+           String redLetter ="";
+           String blueLetter = "";
+           String greenLetter = "";
            //
            //Asks user to input red
            System.out.print("Enter the amount for red 0-255: ");
            int colorRed = colorInput.nextInt();
-           hexRed = colorRed/16
-           hexRedRemain = colorRed%16
+           hexRed = colorRed/16;
+           hexRedRemain = colorRed%16;
            if (hexRedRemain>=10)
            {
                if (hexRedRemain==10)
                {
-                   hexRedRemain=A;
+                   redLetter="A";
                }
-               if (hexRedRemain==11)
+               else if (hexRedRemain==11)
                {
-                   hexRedRemain=B;
+                   redLetter="B";
                }
-               if (hexRedRemain==12)
+               else if (hexRedRemain==12)
                {
-                   hexRedRemain=C;
+                   redLetter="C";
                }
-               if (hexRedRemain==13)
+               else if (hexRedRemain==13)
                {
-                   hexRedRemain=D;
+                   redLetter="D";
                }
-               if (hexRedRemain==14)
+               else if (hexRedRemain==14)
                {
-                   hexRedRemain=E;
+                   redLetter="E";
                }
-               if (hexRedRemain==15)
+               else if (hexRedRemain==15)
                {
-                   hexRedRemain=F;
+                   redLetter="F";
                }
            }
            //
            //Asks user to input green
            System.out.print("Enter the amount for green 0-225: ");
            int colorGreen = colorInput.nextInt();
-           hexGreen = colorGreen/16
-           hexGreenRemain = colorGreen%16
+           hexGreen = colorGreen/16;
+           hexGreenRemain = colorGreen%16;
            if (hexGreenRemain>=10)
            {
                if (hexGreenRemain==10)
                {
-                   hexGreenRemain=A;
+                   greenLetter="A";
                }
-               if (hexGreenRemain==11)
+               else if (hexGreenRemain==11)
                {
-                   hexGreenRemain=B;
+                   greenLetter="B";
                }
-               if (hexGreenRemain==12)
+               else if (hexGreenRemain==12)
                {
-                   hexGreenRemain=C;
+                   greenLetter="C";
                }
-               if (hexGreenRemain==13)
+               else if (hexGreenRemain==13)
                {
-                   hexGreenRemain=D;
+                   greenLetter="D";
                }
-               if (hexGreenRemain==14)
+               else if (hexGreenRemain==14)
                {
-                   hexGreenRemain=E;
+                   greenLetter="E";
                }
-               if (hexGreenRemain==15)
+               else if (hexGreenRemain==15)
                {
-                   hexGreenRemain=F;
+                   greenLetter="F";
                }
            }
            //
            //Asks user to input blue
            System.out.print("Enter the amount for blue 0-225: ");
            int colorBlue = colorInput.nextInt();
-           hexBlue = colorBlue/16
-           hexBlueRemain = colorBlue%16
+           hexBlue = colorBlue/16;
+           hexBlueRemain = colorBlue%16;
            if (hexBlueRemain>=10)
            {
                if (hexBlueRemain==10)
                {
-                   hexBlueRemain=A;
+                   blueLetter="A";
                }
-               if (hexBlueRemain==11)
+               else if (hexBlueRemain==11)
                {
-                   hexBlueRemain=B;
+                   blueLetter="B";
                }
-               if (hexBlueRemain==12)
+               else if (hexBlueRemain==12)
                {
-                   hexBlueRemain=C;
+                   blueLetter="C";
                }
-               if (hexBlueRemain==13)
+               else if (hexBlueRemain==13)
                {
-                   hexBlueRemain=D;
+                   blueLetter="D";
                }
-               if (hexBlueRemain==14)
+               else if (hexBlueRemain==14)
                {
-                   hexBlueRemain=E;
+                   blueLetter="E";
                }
-               if (hexBlueRemain==15)
+               else if (hexBlueRemain==15)
                {
-                   hexBlueRemain=F;
+                   blueLetter="F";
                }
            }
-           if (colorRed>255 || colorRed<0
-               colorGreen>255 || colorGreen<0
-               colorBlue>255 || colorBlue<0)
+           if (colorRed>255 || colorRed<0) 
                {
-                   System.out.println("You cannot enter invalid values!")
+                   System.out.println("You cannot enter invalid values!");
                }
                
-               System.out.println(hexRed+hexRedRemain+hexGreen+hexGreenRemain+hexBlue+hexBlueRemain);
+           if (colorGreen>255 || colorGreen<0)
+               {
+                   System.out.println("You cannot enter invalid values!");
+               }
+               
+           if (colorBlue>255 || colorBlue<0)
+               {
+                   System.out.println("You cannot enter invalid values!");
+               }
+               
+               System.out.println(hexRed + redLetter + hexGreen + greenLetter + hexBlue + blueLetter);
+               
+               
            
     }  //end of main method   
 } //end of class
