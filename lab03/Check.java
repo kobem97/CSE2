@@ -31,7 +31,7 @@ public class Check {
            totalCost = checkCost*(1+tipPercent); //calculation for total cost
            costPerPerson = totalCost/numPeople; // calculation for cost per person
            dollars = (int)costPerPerson; // makes costPerPerson an integer
-           dimes = (int)(costPePerrson*10)%10; //makes it so the dime is the .1 value
+           dimes = (int)(costPerPerson*10)%10; //makes it so the dime is the .1 value
            pennies = (int)(costPerPerson*100)%10; //makes it so the penny is the .01 value
            //
            //prints out final answer

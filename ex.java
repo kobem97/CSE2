@@ -10,18 +10,11 @@
 
 public class ex {
        public static void main(String[] args) {
-           
-           int randomNumber = (int)(Math.random()*13);
-           if (randomNumber>=2){
-               System.out.println("yay");
-           }
-           else if (randomNumber==1){
-               System.out.println("boo");
-           } 
-           
-           
-           
-           
-           
+           int n;
+           n=(5%6);
+          System.out.println(n);
+          
+
+
     }  //end of main method   
 } //end of class
