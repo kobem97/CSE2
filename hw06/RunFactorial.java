@@ -38,7 +38,7 @@ public class RunFactorial {
                }
                //
                //if the numbers are out of range
-               if (checkFactorial<=9 || checkFactorial>=16)
+               if (checkFactorial<9 || checkFactorial>16)
                {
                    //it will print this
                    System.out.println("Invalid input! Enter again!");
