@@ -133,43 +133,57 @@ public class Games{
     }//end of scrambler method
     //main method 
     public static void main(String [] args){
-        System.out.println("Welcome to Kobe's Game Center!");
-        System.out.println("Your options are: guessTheBox, spinTheWheel, or scrambler");
-        //new Scanner called checkGame
-        Scanner checkGame = new Scanner(System.in);
-        System.out.print("Input your desired game: ");
-        //game is a string equal to checkGame
-        String game = checkGame.nextLine();//
-        String guessTheBox = "guessTheBox";//initialize string
-        String spinTheWheel = "spinTheWheel";//initialize string
-        String scrambler = "scrambler";//initialize string
-        //if what the user input equals guessTheBox, it will call guessTheBox method
-        if (game.equals(guessTheBox))
+
+        System.out.println("#*##*##*##*##*##*##*##*##*##*##*##*#");
+        System.out.println("*#**#**#**#**#**#**#**#**#**#**#**#*");
+        System.out.println("#                                  #");
+        System.out.println("*  Welcome to Kobe's Game Center!  *");
+        System.out.println("#                                  #");
+        System.out.println("*#**#**#**#**#**#**#**#**#**#**#**#*");
+        System.out.println("#*##*##*##*##*##*##*##*##*##*##*##*#");
+        while (true)
         {
-            guessTheBox();
+            System.out.println("Your options are: guessTheBox, spinTheWheel, or scrambler");
+            //new Scanner called checkGame
+            Scanner checkGame = new Scanner(System.in);
+            System.out.print("Input your desired game: ");
+            //game is a string equal to checkGame
+            String game = checkGame.nextLine();//
+            String guessTheBox = "guessTheBox";//initialize string
+            String spinTheWheel = "spinTheWheel";//initialize string
+            String scrambler = "scrambler";//initialize string
+            //if what the user input equals guessTheBox, it will call guessTheBox method
+            if (game.equals(guessTheBox))
+            {
+                guessTheBox();
+                break;
+            }
+            //if what the user input equals spinTheWheel, it will call spinTheWheel method
+            else if (game.equals(spinTheWheel))
+            {
+                spinTheWheel();
+                break;
+            }
+            //if what the user input equals scrambler, it will call scrambler method
+            else if (game.equals(scrambler))
+            {
+                //new Scanner scramble
+                Scanner scramble = new Scanner(System.in);
+                System.out.print("Input your desired word: ");
+                //scrambled is a string equal to the Scanner scramble
+                String scrambled = scramble.nextLine();
+                //calls the method scrambler, and has scrambled literally scrambled
+                System.out.println(scrambler(scrambled));
+                break;
+            }
+            //if the user inputs anything else
+            //it will print that we do not have what ever the user inputs
+            //and then ends
+            else if ((!(game.equals(guessTheBox))) && (!(game.equals(spinTheWheel))) && (!(game.equals(scrambler))))
+            {
+                System.out.println("We do not have "+ game);
+                break;
+            }
         }
-        //if what the user input equals spinTheWheel, it will call spinTheWheel method
-        else if (game.equals(spinTheWheel))
-        {
-            spinTheWheel();
-        }
-        //if what the user input equals scrambler, it will call scrambler method
-        else if (game.equals(scrambler))
-        {
-            //new Scanner scramble
-            Scanner scramble = new Scanner(System.in);
-            System.out.print("Input your desired word: ");
-            //scrambled is a string equal to the Scanner scramble
-            String scrambled = scramble.nextLine();
-            //calls the method scrambler, and has scrambled literally scrambled
-            System.out.println(scrambler(scrambled));
-        }
-        //if the user inputs anything else
-        //it will print that we do not have what ever the user inputs
-        //and then ends
-        else if ((!(game.equals(guessTheBox))) && (!(game.equals(spinTheWheel))) && (!(game.equals(scrambler))))
-        {
-            System.out.println("We do not have "+ game);
-        }
-    }
-}
+    }//end of main method
+}//end of main class
