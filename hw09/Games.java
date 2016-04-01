@@ -61,9 +61,11 @@ public class Games{
     //method for spinTheWheel
     public static void spinTheWheel()
     {
-        //integer numGen is initialized
-        int numGen = 0;
-        System.out.println("Choose a color Black or Red");
+        while (true)
+        {
+            //integer numGen is initialized
+            int numGen = 0;
+            System.out.println("Choose a color Black or Red");
             System.out.println("And choose a number 1-5");
             //randomizer from 1-2
             int colorGen = (int)((Math.random()*2)+1);
@@ -95,18 +97,26 @@ public class Games{
             System.out.print("Input your desired number: ");
             //int num is equal to mySpinNum
             int num = mySpinNum.nextInt();
+            
             //if you guess correctly, you win
             if ((color.equals(colorGen1)) || (color.equals(colorGen2)) && num == numGen)
             {
                 System.out.print("The wheel has spun, and it matches your ");
                 System.out.println("combo of "+color+" "+num+" Congratulations!");
+                break;
             }
             //if you guess incorrectly, you lose and show what the wheel spun
             if ((!(color.equals(colorGen1))) && (!(color.equals(colorGen2))) || ((num != numGen)))
             {
                 System.out.print("The wheel has spun, and it doesn't match your ");
                 System.out.println("combo of "+color+" "+num+" the wheel spun "+colorGen1+" "+numGen);
+                break;
             }
+            if (num<1 || num>5)
+            {
+                System.out.println("Please enter a number between 1-5, try again!");
+            }
+        }
     }//end of spinTheWheel Method
     //scramble method
     public static String scrambler(String str) 

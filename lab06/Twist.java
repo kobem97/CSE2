@@ -1,104 +1,99 @@
 //Kobe Miller
-//3-4-16
-//twist is rotate how many times you want to
+//Lab06
+//user input length, print out a twist based on input length
+//3/4/2016
 
+import java.util.Scanner;
 
-import java.util.Scanner; //imports
-
-public class Twist {
-       public static void main(String[] args) {
-           //
-           //creates checkTwist
-           Scanner checkTwist = new Scanner(System.in); //Declaration
-           //
-           //asks user length of twist
-           System.out.print("Enter the length of the twist: ");
-           int checkLength = checkTwist.nextInt();
-           //creats twist that is equal to checklength/3
-           int twist = (checkLength/3);
-           //modulus that finds remainder of checkLength by 3
-           //part twist is equal to the modulus and is an integer
-           int partTwist = (checkLength%3);
-           //count will be used as increment
-           int count = 1;
-           //while will loop until count is equal to twist
-           while (count <= twist)
-           {
-               System.out.print("\\ /");
-               count++;
-           }
-               //if remainder is 0, it ends
-               if (partTwist == 0)
-               {
-                   System.out.printf("\n");
-                   count = 1;
-               }
-               //if remainder is 1, it adds a "\" before ending
-               else if (partTwist == 1)
-               {
-                   System.out.print("\\");
-                   System.out.printf("\n");
-                   count = 1;
-               }
-               //if remainder is 2, it adds a "\ " before ending
-               else if (partTwist == 2)
-               {
-                   System.out.print("\\ ");
-                   System.out.printf("\n");
-                   count = 1;
-               }
-               //same while just with second line
-               while (count <= twist)
-               {
-                   System.out.print(" X ");
-                   count++;
-               }
-               
-               if (partTwist == 0)
-               {
-                   System.out.printf("\n");
-                   count = 1;
-               }
-               
-               else if (partTwist == 1)
-               {
-                   System.out.print(" ");
-                   System.out.printf("\n");
-                   count = 1;
-               }
-               
-               else if (partTwist == 2)
-               {
-                   System.out.print(" X ");
-                   System.out.printf("\n");
-                   count = 1;
-               }
-               //same while loop just with third line
-               while (count <= twist)
-               {
-                   System.out.print("/ \\");
-                   count++;
-               }
-               
-               if (partTwist == 0)
-               {
-                   System.out.printf("\n");
-                   count = 1;
-               }
-               
-               else if (partTwist == 1)
-               {
-                   System.out.print("/");
-                   System.out.printf("\n");
-                   count = 1;
-               }
-               
-               else if (partTwist == 2)
-               {
-                   System.out.print("/ ");
-                   System.out.printf("\n");
-                   count = 1;
-               }
-           
-    }  //end of main method   
-} //end of class
+public class Twist{
+    public static void main (String[] args) {
+        Scanner myScanner = new Scanner(System.in);
+        int length = 0;
+        //Code to input positive values. 
+        //runs until an integer is inserted.
+        System.out.print("Enter the length of the twist: ");
+        while (!myScanner.hasNextInt())
+        {
+            myScanner.next();
+        }
+        int input = myScanner.nextInt();
+        if (input < 0)
+        {
+            length = (input * -1);
+        }
+        else
+        { 
+            length = input;
+        }
+        System.out.println("You entered " + length + " as the length of your twist.");
+        int fullTwist = (length / 3);
+        int partialTwist = (length % 3);
+        int i = 1;
+        while(i <= fullTwist)
+        {
+            System.out.print("\\ /");
+            i++;
+        }
+        if(partialTwist == 0)
+        {
+            System.out.printf("\n");
+            i = 1;
+        }
+        else if(partialTwist == 1)
+        {
+            System.out.print("\\");
+            System.out.printf("\n");
+            i = 1;
+        } 
+        else if (partialTwist == 2)
+        {
+            System.out.print("\\ ");
+            System.out.printf("\n");
+            i = 1;
+        }
+        while(i <= fullTwist)
+        {
+            System.out.print(" X ");
+            i++;
+        }
+        if(partialTwist == 0)
+        {
+            System.out.printf("\n");
+            i = 1;
+        }
+        else if(partialTwist == 1)
+        {
+            System.out.print(" ");
+            System.out.printf("\n");
+            i = 1;
+        } 
+        else if (partialTwist == 2)
+        {
+            System.out.print(" X");
+            System.out.printf("\n");
+            i = 1;
+        }
+        while(i <= fullTwist)
+        {
+            System.out.print("/ \\");
+            i++;
+        }
+       if(partialTwist == 0)
+       {
+            System.out.printf("\n");
+            i = 1;
+        }
+        else if(partialTwist == 1)
+        {
+            System.out.print("/");
+            System.out.printf("\n");
+            i = 1;
+        } 
+        else if (partialTwist == 2)
+        {
+            System.out.print("/ ");
+            System.out.printf("\n");
+            i = 1;
+        }
+    }  //End of Method   
+} //End of Class
