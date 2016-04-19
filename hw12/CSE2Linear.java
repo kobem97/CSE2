@@ -1,7 +1,7 @@
 //Kobe Miller
-//hw07
-//Twisty
-//21-March-2016
+//hw12
+//CSE2Linear
+//April 18, 2016
 
 //imports the scanner
 import java.util.Scanner; //Scanner is a new class
