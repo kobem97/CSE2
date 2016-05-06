@@ -12,11 +12,11 @@ public class lab12{
         Scanner myScanner = new Scanner(System.in);
         Random randomGen = new Random();
        
-        System.out.print("Enter the size of the array:");
+        System.out.print("Enter the size of the array: ");
        
         while (!myScanner.hasNextInt()){
-                    myScanner.next();
-                    System.out.println("Invalid input. Please enter an integer.");
+            myScanner.next();
+            System.out.println("Invalid input. Please enter an integer. ");
         }
         int arraySize = myScanner.nextInt();
         
@@ -29,7 +29,7 @@ public class lab12{
             ragged[i] = new int[randomInt];
         }
        
-        System.out.println("Ragged Unsorted Array:");
+        System.out.println("Ragged Unsorted Array: ");
        
         for(int i = 0; i < arraySize; i++){
             for(int j = 0; j < ragged[i].length; j++){
@@ -40,7 +40,7 @@ public class lab12{
             System.out.print("\n");
         }
        
-        System.out.println("Ragged Sorted Array:");
+        System.out.println("Ragged Sorted Array: ");
        
         for(int i = 0; i < arraySize; i++){
             Arrays.sort(ragged[i]);
@@ -80,14 +80,12 @@ public class lab12{
         }
         
         int target1 = myScanner.nextInt();
-        int a = 0;
-        int b = 0;
         //Print found int 
         for(int i = 0; i < arraySize; i++){
             for(int j = 0; j < ragged[i].length; j++){
-                if (ragged[i] == target1)
+                if (ragged[i][j] == target1)
                 {
-                    System.out.println("Column "+ a + " Row " + b);
+                    System.out.println("Column "+ i + " Row " + j);
                     break;
                 }
                 else if (i == arraySize && j == ragged[i].length)
@@ -95,9 +93,7 @@ public class lab12{
                     System.out.println("Not in array");
                     break;
                 }
-                b++;
             }
-            a++;
         }
        
        

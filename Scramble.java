@@ -4,23 +4,55 @@
 //This is a basic calculator
 //It will find how much each person has to pay
 //From the whole bill, and tip
+import java.util.Scanner;
 
 public class Scramble {
 
-    public static String scramble(String str) {   
-        StringBuilder newStringBuilder = new StringBuilder();
-        StringBuilder stringBuilder = new StringBuilder(str);
-
-        while (stringBuilder.length() > 0) {
-            int n = (int)(Math.random() * stringBuilder.length());
-            newStringBuilder.append(stringBuilder.charAt(n));
-            stringBuilder.deleteCharAt(n);
+    public static int[] resize (int[] myArray, int newSize) {   
+        
+        int copyArray [] = new int [newSize];
+        
+        if (newSize < myArray.length)
+        {
+            for (int i = 0; i<copyArray.length; i++)
+            {
+                copyArray[i] = myArray[i];
+                System.out.println("copyArray: " + copyArray[]);
+            }
         }
+        if (newSize > myArray.length)
+        {
+            for (int i = 0; i<copyArray.length; i++)
+            {
+                if (i < myArray.length)
+                {
+                    for (int i = 0; i<copyArray.length; i++)
+                    {
+                        copyArray[i] = myArray[i];
+                    System.out.println("copyArray: " + copyArray[]);
+                    }
+                }
+                if (i <= myArray.length)
+                {
+                    for (int i = myArray.length; i < copyArray.length; i ++)
+                    {
+                        copyArray[i] = 0;
+                    }
+                }
+            }
+        }
+        
+        
 
-        return newStringBuilder.toString();
+
     }
-
-    public static void main(String[] args) {
-        System.out.println(scramble("hola"));
+    public static void main(String[] args){
+        
+        
+        
+        
+        
+        
+        
     }
 }

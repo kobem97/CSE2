@@ -15,6 +15,7 @@ public class SenGen{
             System.out.print("Would you like to print another sentence[N = 0/ Y = 1]:");
             while (!myScanner.hasNextInt()){ 
                 myScanner.next();
+                System.out.println("Not an int, please enter 1 or 0");
             }
             int repeat = myScanner.nextInt();
             
